@@ -4,43 +4,57 @@ header {
 
 .content {
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 30% 30% 40%;
-    grid-template-areas: 
-    "aboutMe austinphoto"
-    "paragraph none"
-    "list list";
+    grid-template-columns: 1fr 1fr;
+    
 }
 
 article {
-    grid-area: aboutMe; 
     font-size: 150px;
     font-family: 'Times New Roman', Times, serif;
     justify-content: center;
 }
 
-.austinphoto {
-    grid-area: austinphoto;
-    height: auto;
-    width: auto;   
+.austinPhoto {
+     width: 80%;
+     display: flex;
+     margin: auto;
 }
 
 p {
-    grid-area: paragraph;
     font-size: 20px; 
 }
 
 
 ol {
-    grid-area: list;
     font-style: italic;
     font-size: 25px;
 }
 
+.title {
+   
+}
 
 
+@media(max-width:1200px) {
+    .content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+} 
+    
 
-  
+@media(max-width:800px) {
+    .text article {
+       font-size: 80px;
+    }
+} 
+    
+
+@media(max-width:375px) {
+    .text article {
+       font-size: 30px;
+    }
+} 
     
  
    
@@ -81,6 +95,7 @@ a {
     justify-content: flex-end;
     width: 100%;
     padding-right: 2%;
+    background-color: rgb(198, 235, 231);
   }
 
 /* Above is for the Icons at the Top */
