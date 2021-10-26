@@ -25,3 +25,19 @@ nav > a {
     justify-content: flex-end;
     width: 100%;
     padding-right: 2%;
+
+ label {
+      display: block;
+      font: 1rem 'Fira Sans', sans-serif;
+  }
+  
+  input,
+  label {
+      margin: .4rem 0;
+  }
+
+  .comments {
+      display: block;
+      height: 50px;
+      width: 100px;
+  }
