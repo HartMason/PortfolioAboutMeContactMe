@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="contactPage.css"/>
+    <script src="contact.js"></script>
 </head>
 <header>
     <nav>
@@ -18,38 +19,47 @@
  <body>
      <main>    
         <div class="email">
-            <label for="email">Enter your email here</label>
-            <input type="text" name="email" id="email">
+            <label class= emailLabel for="email">Enter your email here</label>
+            <input type="email" name="email" id="email" placeholder="type your email" required onkeyup="Capitalized()">
+            
         </div>
         <div class="commentSection">
-            <textarea id="comments" name="paragraph" rows="5" cols="50"></textarea>
+            <label class= commentHeader for="comments">Comments</label>
+            <textarea id="comments" name="paragraph" rows="5" cols="50" maxlength="500" minlength="20"></textarea>
         </div>    
         
         <p>How did you hear about me?</p>
-        <div>
-            <input type="checkbox" id="LinkedIn" name="LinkedIn" unchecked>
+        <div class="checkbox">
             <label for="LinkedIn">LinkedIn</label>
-        </div>
-        <div>
-            <input type="checkbox" id="Classmate" name="Classmate" unchecked>
+            <input type="checkbox" id="LinkedIn" name="LinkedIn" unchecked>
+            
             <label for="Classmate">Classmate</label>
-        </div>
-        <div>
-            <input type="checkbox" id="Resume Submission" name="Resume" unchecked>
+            <input type="checkbox" id="Classmate" name="Classmate" unchecked>
+        
             <label for="Resume Submission">Resume Submission</label>
-        </div>
-        <div>
-            <input type="checkbox" id="Coding Academy Rec" name="Coding Academy Rec" unchecked>
+            <input type="checkbox" id="Resume Submission" name="Resume" unchecked>
+       
             <label for="Coding Academy Rec">Coding Academy Rec</label>
+            <input type="checkbox" id="Coding Academy Rec" name="Coding Academy Rec" unchecked>
         </div>
 
+        <p>Do you want to be Contacted Back?</p>
         <div>
+            <input type="radio" id="Yes" name="Yes" value="Yes">
+            <label for="Yes">Yes</label>
+            <input type="radio" id="No" name="No" value="No">
+            <label for="No">No</label>
+        </div>
+
+
+        <div class="birthday">
             <label for="birthday">Birthday</label>
             <input type="date" id="birthday" name="birthday">
+
         </div>
 
         <div>
-            <input type="submit">
+            <input type="submit" id="email" onclick="dataSubmission()">
         </div>
     
     </main>
